@@ -1,0 +1,9 @@
+results/
+imputation_check/*.jar
+imputation_check/*.vcf
+imputation_check/*.vcf.gz
+imputation_check/*.log
+imputation_check/*.RData
+.Rhistory
+.RData
+.Rproj.user/
