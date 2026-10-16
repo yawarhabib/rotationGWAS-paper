@@ -19,7 +19,7 @@ Yawar Habib and Hans-Peter Piepho
 ## Contact
 
 - Yawar Habib, habib.yawr.10@gmail.com, for the scripts and the data
-- Hans-Peter Piepho, the corresponding author, for the paper
+- Hans-Peter Piepho, hans-peter.piepho@uni-hohenheim.de, the corresponding author, for the paper
 
 ## License
 
