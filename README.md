@@ -4,14 +4,6 @@ The scripts and the data that reproduce the numbers, tables and figures of the
 paper. Every script is run from the repository root and writes into
 `results/`; the imputation check writes into its own folder.
 
-## Citation
-
-The DOI of this repository is [to be added when Zenodo issues it].
-
-If you use these scripts or the data, please cite the paper
-
-[the citation of the paper, to be added]
-
 ## Authors
 
 Yawar Habib and Hans-Peter Piepho
