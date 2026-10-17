@@ -49,6 +49,7 @@ ORDER <- c(
   "scripts/10g_simC_residual_fixed.R",
   "scripts/10h_simC_marker_test_residual_one.R",
   "scripts/10i_simC_smith_weights.R",
+  "scripts/10j_simC_covariance_structure.R",
   "scripts/10k_simC_asv_share.R",
   "scripts/10l_simC_refit_window.R",
   "scripts/10m_simC_efficiency_medabs.R",
