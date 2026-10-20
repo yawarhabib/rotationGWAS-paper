@@ -94,7 +94,7 @@ t3 <- data.frame(
   RMSE_inverse_var  = round(gp("diagonal",   "RMSE"), 3),
   RMSE_unweighted   = round(gp("unweighted", "RMSE"), 3),
   row.names = NULL, stringsAsFactors = FALSE)
-names(t3) <- c("Accessions per environment", "Mean absolute correlation", "Estimation share",
+names(t3) <- c("Accessions per environment", "Mean absolute correlation", "Estimation error share",
                "Power rotated", "Power inverse-variance", "Power unweighted",
                "RMSE rotated", "RMSE inverse-variance", "RMSE unweighted")
 
@@ -269,7 +269,7 @@ fig2 <- function() {
     geom_line(colour = "grey15", linewidth = 0.6) +
     geom_point(shape = 21, fill = "white", colour = "grey15", size = 2, stroke = 0.7) +
     sx() + scale_y_continuous(limits = c(0, 0.36), expand = c(0, 0)) +
-    labs(x = NULL, y = "estimation share", tag = "A") + th
+    labs(x = NULL, y = "estimation error share", tag = "A") + th
   ca <- do.call(rbind, lapply(ARMS, function(a) scheme_df(a, x = xb, y = gp(a, "power_59206"))))
   pB <- ggplot(ca, aes(x, y, colour = scheme, shape = scheme, linetype = scheme)) +
     geom_line(linewidth = 0.6) + geom_point(size = 2) + scheme_scales() + sx() +
