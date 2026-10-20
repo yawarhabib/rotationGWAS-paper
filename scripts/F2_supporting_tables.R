@@ -169,7 +169,7 @@ cap_S3 <- paste0(
   f4(s3at("Mean diagonal of A", "none")), " with no filter to ", f4(s3at("Mean diagonal of A", "0.10")), " at 0.10 and ",
   f4(s3at("Mean diagonal of A", "0.02")), " at 0.02, where ", format(s3at("Markers retained", "0.02"), big.mark = ","),
   " markers remained and the residual variance was ", f4(s3at("Residual variance", "0.02")),
-  ". The variance components are from the fit of script S1, which uses its own optimiser; at 0.10 they differ from those of Table 2 by less than 0.02.")
+  ". The variance components are from the fit of script S1, which uses its own optimizer; at 0.10 they differ from those of Table 2 by less than 0.02.")
 
 cap_S4 <- paste0(
   "Table S4. Sensitivity to the imputation of missing genotype calls. In the main text, the ",
