@@ -6,7 +6,7 @@ paper. Every script is run from the repository root and writes into
 
 ## Authors
 
-Yawar Habib and Hans-Peter Piepho
+Yawar Habib, Tatiana Aseeva and Hans-Peter Piepho
 
 ## Contact
 

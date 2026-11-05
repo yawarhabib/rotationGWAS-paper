@@ -72,7 +72,7 @@ figs <- list(list("figureS1_paired_differences.png", 5.0, 3.8, cap_S1),
 doc <- read_docx()
 doc <- body_add_fpar(doc, fpar(ftext("Supporting Information", title)))
 doc <- body_add_fpar(doc, fpar(ftext("Exact weighting in two-stage genome-wide association analysis: when does it matter?", ital)))
-doc <- body_add_fpar(doc, fpar(ftext("Y. Habib and H. P. Piepho", body)))
+doc <- body_add_fpar(doc, fpar(ftext("Y. Habib, T. Aseeva and H. P. Piepho", body)))
 doc <- body_add_fpar(doc, fpar(ftext("Tables S1 to S3 are provided in the workbook Supporting_Information_Tables.xlsx.", body)))
 for (f in figs) {
   doc <- body_add_par(doc, "")
