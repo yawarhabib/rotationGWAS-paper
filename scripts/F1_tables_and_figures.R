@@ -188,7 +188,7 @@ fig1_dep <- do.call(rbind, lapply(ARMS, function(a) {
 ## All six figures are drawn with ggplot2 under one theme and written as PDF
 ## and as PNG from the same plot object.
 suppressPackageStartupMessages({ library(ggplot2); library(patchwork) })
-set.seed(20260916)                       # the jitter in Figure 1B is reproducible
+set.seed(20260916)                       # the jitter in Figure 1b is reproducible
 GCOL <- setNames(COL[ARMS], LAB[ARMS]); GSHP <- setNames(PCH[ARMS], LAB[ARMS])
 GLTY <- setNames(c("solid", "22", "12"), LAB[ARMS])
 th <- theme_classic(base_size = 9) +
@@ -218,9 +218,9 @@ LP_X <- expression("single-stage " * -log[10] * italic(p))
 LP_D <- expression("paired difference in " * -log[10] * italic(p))
 
 ## ---------- Figure 1: agreement with the single-stage analysis ----------
-## (A) the paired difference in -log10 p against the single-stage -log10 p, one
+## (a) the paired difference in -log10 p against the single-stage -log10 p, one
 ## point per marker and scheme, with a least-squares line per scheme. Every
-## marker is shown; the axis covers the whole range. (B) the paired difference
+## marker is shown; the axis covers the whole range. (b) the paired difference
 ## in the standard error, with the mean and two standard errors on either side.
 fig1 <- function() {
   x <- e06$ss$neglog10p
@@ -231,7 +231,7 @@ fig1 <- function() {
     geom_point(alpha = 0.55, size = 1.4) +
     geom_smooth(method = "lm", formula = y ~ x, se = FALSE, linewidth = 0.7) +
     scheme_scales(aes = c("colour", "shape")) + coord_cartesian(xlim = range(x)) +
-    labs(x = LP_X, y = LP_D, tag = "A") + th +
+    labs(x = LP_X, y = LP_D, tag = "a") + th +
     ## above the panel: with every marker shown, no corner of the panel is
     ## free of points
     theme(legend.position = "top", legend.margin = margin(0, 0, 0, 0), legend.box.spacing = unit(2, "pt"))
@@ -246,7 +246,7 @@ fig1 <- function() {
                   width = 0.12, linewidth = 0.6) +
     geom_errorbar(data = sm, aes(x = scheme, ymin = m, ymax = m, colour = scheme), inherit.aes = FALSE,
                   width = 0.6, linewidth = 1.1) +
-    scheme_scales(aes = c("colour", "shape")) + labs(x = NULL, y = "paired difference in standard error", tag = "B") +
+    scheme_scales(aes = c("colour", "shape")) + labs(x = NULL, y = "paired difference in standard error", tag = "b") +
     th + theme(legend.position = "none")
   pA + pB + plot_layout(ncol = 2)
 }
@@ -269,12 +269,12 @@ fig2 <- function() {
     geom_line(colour = "grey15", linewidth = 0.6) +
     geom_point(shape = 21, fill = "white", colour = "grey15", size = 2, stroke = 0.7) +
     sx() + scale_y_continuous(limits = c(0, 0.36), expand = c(0, 0)) +
-    labs(x = NULL, y = "estimation error share", tag = "A") + th
+    labs(x = NULL, y = "estimation error share", tag = "a") + th
   ca <- do.call(rbind, lapply(ARMS, function(a) scheme_df(a, x = xb, y = gp(a, "power_59206"))))
   pB <- ggplot(ca, aes(x, y, colour = scheme, shape = scheme, linetype = scheme)) +
     geom_line(linewidth = 0.6) + geom_point(size = 2) + scheme_scales() + sx() +
     scale_y_continuous(limits = c(0.4, 0.95)) +
-    labs(x = "accessions per environment", y = "power", tag = "B") + th + legend_at(0.98, 0.04)
+    labs(x = "accessions per environment", y = "power", tag = "b") + th + legend_at(0.98, 0.04)
   ## the standard deviation of the estimates under the null relative to the
   ## rotation: the scheme effect alone, since the design effect cancels
   cr <- e10$c_ratio[match(co$n_years, e10$c_ratio$n_years), ]
@@ -284,7 +284,7 @@ fig2 <- function() {
   pC <- ggplot(rat, aes(x, y, colour = scheme, shape = scheme, linetype = scheme)) +
     geom_line(linewidth = 0.6) + geom_point(data = rat[rat$scheme != "rotated", ], size = 2) +
     scheme_scales() + sx() + scale_y_continuous(limits = c(0.98, 1.20)) +
-    labs(x = NULL, y = "SD of estimates relative to rotation", tag = "C") + th +
+    labs(x = NULL, y = "SD of estimates relative to rotation", tag = "c") + th +
     theme(legend.position = "none")
   ## narrower margins between the three panels
   tight <- theme(plot.margin = margin(4, 2, 2, 2))
@@ -387,7 +387,7 @@ checks <- data.frame(
             "Table 4 has one row per truth condition",
             "no missing values in any table",
             "the significant-marker counts match the scan",
-            "Figure 1A: level dependence computed on every marker of the comparison set"),
+            "Figure 1a: level dependence computed on every marker of the comparison set"),
   Result = c(all(file.exists(files)),
              all(file.info(files)$size > 0),
              nrow(t1) == nlevels(e01$pheno$Year),
@@ -403,7 +403,7 @@ cat("\nTable 1, the trial\n");            print(t1, row.names = FALSE)
 cat("\nTable 2, the observed trial\n");   print(t2, row.names = FALSE)
 cat("\nTable 3, the regime map\n");       print(t3, row.names = FALSE)
 cat("\nTable 4, what the test can detect\n"); print(t4, row.names = FALSE)
-cat("\nFigure 1A, the paired difference against the strength of the marker\n")
+cat("\nFigure 1a, the paired difference against the strength of the marker\n")
 print(fig1_dep, row.names = FALSE)
 cat("\nthe distribution behind Figure S1\n")
 print(figS1_tab, row.names = FALSE)
