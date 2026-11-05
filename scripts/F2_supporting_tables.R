@@ -180,7 +180,7 @@ cap_S4 <- paste0(
 captions <- c(
   "Supporting Information Tables", "",
   paste0("Table S1. Equivalence and invariance checks at the marker ", TEST_SNP, ", the marker with the smallest p-value in the genome scan. All quantities are computed on the observed trial."),
-  "(S1a) The five fixed-effect coefficients under least squares without weighting, least squares on the rotated data, and generalised least squares with weight Omega^-1 on the unrotated data. The genetic kernel is excluded, so that the equivalence of (6) and (7) is exact.",
+  "(S1a) The five fixed-effect coefficients under least squares without weighting, least squares on the rotated data, and generalized least squares with weight Omega^-1 on the unrotated data. The genetic kernel is excluded, so that the equivalence of (6) and (7) is exact.",
   "(S1b) The four rotations of Materials and Methods, with the genetic kernel included. The deviation is the largest absolute element of W'W - Omega^-1.",
   "(S1c) The marker effect with the rotated intercept column W1, and with a plain column of ones in its place.",
   "(S1d) A single-stage analysis of the plot data and the three two-stage schemes, all with the genetic kernel included. Ratios are to the single-stage reference.", "",
